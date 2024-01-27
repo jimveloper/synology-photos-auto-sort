@@ -31,3 +31,57 @@ Add a new cron job to run periodically the script
 Replace **gulivert** by your username.
 
 This rule will launch the script every minute using as source folder /volume1/Download/images_temp and /volume1/photo as target.
+
+## Jim Notes
+
+* Log into Synology
+
+```console
+PS C:\Users\jajoh> ssh jajohga@10.0.0.216 -p22
+The authenticity of host '10.0.0.216 (10.0.0.216)' can't be established.
+ED25519 key fingerprint is SHA256:j034je7JJ7Pz/GHJNdFUyD7iYYcA6K/UNUabo0IUvPk.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+PS C:\Users\jajoh> ssh jajohga@10.0.0.216 -p22
+The authenticity of host '10.0.0.216 (10.0.0.216)' can't be established.
+ED25519 key fingerprint is SHA256:j034je7JJ7Pz/GHJNdFUyD7iYYcA6K/UNUabo0IUvPk.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.0.0.216' (ED25519) to the list of known hosts.
+jajohga@10.0.0.216's password:
+```
+## Exiftool
+https://exiftool.org/
+
+## Testing
+Input: Dana Pictures
+out: out
+
+https://www.cyberciti.biz/tips/handling-filenames-with-spaces-in-bash.html
+
+```console
+jajohga@jajohga:~/exiftool/Image-ExifTool-12.73$ rm /tmp/synology_photos_auto_sort.pid
+jajohga@jajohga:~/exiftool/Image-ExifTool-12.73$ ./synology-photos-auto-sort.sh ./Pictures ../out
+```
+## PNG
+File Modification Date/Time
+
+Total file count: 1401. ?
+
+Total ext count: 1388. right
+
+  out: 985 (moved + UUID)
+
+Total file moved count: 775.
+
+Total file error count: 0. right
+
+Total file duplicates count: 403. right
+
+**Total file moved UUID count: 210.**
+
+See 
+
+"\\jajohga\home\exiftool\Image-ExifTool-12.73\out\2016\2016.07\20160721_204531.jpeg"
+
